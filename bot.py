@@ -38,7 +38,7 @@ async def approve(_, m : Message):
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
         img = random.choice(gif)
-        await app.send_video(kk.id,img, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @kwicbotupdates__**".format(m.from_user.mention, m.chat.title))
+        await app.send_video(kk.id,img, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @mawabroo__**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -55,10 +55,10 @@ async def op(_, m :Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🗯 Channel", url="https://t.me/MoviesNowOTT2"),
-                        InlineKeyboardButton("💬 Support", url="https://t.me/kwicbotupdates")
+                        InlineKeyboardButton("🗯 Channel", url="https://t.me/MawaBroo"),
+                        InlineKeyboardButton("💬 Support", url="https://t.me/+W01hjKk-0881OGRl")
                     ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/kwicapprovalbot?startgroup")
+                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/MBAutoApprovebot?startgroup")
                     ]
                 ]
             )
@@ -69,7 +69,7 @@ async def op(_, m :Message):
             keyboar = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("💁‍♂️ Start me private 💁‍♂️", url="https://t.me/KwicAutoApproveBot?start=start")
+                        InlineKeyboardButton("💁‍♂️ Start me private 💁‍♂️", url="https://t.me/MBAutoApprovebot?start=start")
                     ]
                 ]
             )
@@ -97,10 +97,10 @@ async def chk(_, cb : CallbackQuery):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🗯 Channel", url="https://t.me/MoviesNowOTT2"),
-                        InlineKeyboardButton("💬 Support", url="https://t.me/kwicbotupdates")
+                        InlineKeyboardButton("🗯 Channel", url="https://t.me/MawaBroo"),
+                        InlineKeyboardButton("💬 Support", url="https://t.me/+W01hjKk-0881OGRl")
                     ],[
-                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/kwicapprovalbot?startgroup")
+                        InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/MBAutoApprovebot?startgroup")
                     ]
                 ]
             )
