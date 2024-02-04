@@ -33,6 +33,10 @@
     "SUDO": {
       "description": "Enter Bot Owners IDS",
       "required": true
+    },
+    "MONGO_URI": {
+      "description": "Enter Bot Mongo DB URL",
+      "required": true
     }
         
   },
