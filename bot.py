@@ -56,7 +56,7 @@ async def op(_, m :Message):
                 ]
             )
             add_user(m.from_user.id)
-            await m.reply_photo("https://telegra.ph/file/342ceb367a8a827d3d383.jpg", caption="**🦊 Hello {}!\nI'm an Auto Approve Bot.\n\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @MawaBroo__**".format(m.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
+            await m.reply_photo("https://telegra.ph/file/342ceb367a8a827d3d383.jpg", caption="**🦊 Hello {}!\n\nI'm MB Auto Approve Bot.\n\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @MawaBroo__**".format(m.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
     
         elif m.chat.type == enums.ChatType.GROUP or enums.ChatType.SUPERGROUP:
             keyboar = InlineKeyboardMarkup(
@@ -131,12 +131,12 @@ async def bcast(_, m : Message):
             userid = usrs["user_id"]
             #print(int(userid))
             if m.command[0] == "bcast":
-                await m.reply_to_message.copy(int(userid))
+                await m.reply_to_message.copy(userid)
             success +=1
         except FloodWait as ex:
             await asyncio.sleep(ex.value)
             if m.command[0] == "bcast":
-                await m.reply_to_message.copy(int(userid))
+                await m.reply_to_message.copy(userid)
         except errors.InputUserDeactivated:
             deactivated +=1
             remove_user(userid)
