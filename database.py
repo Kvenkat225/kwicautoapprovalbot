@@ -7,34 +7,34 @@ users = client['main']['users']
 groups = client['main']['groups']
 
 def already_db(user_id : int):
-        user = users.find_one({"user_id" : str(user_id)})
+        user = users.find_one({"user_id" : user_id})
         if not user:
             return False
         return True
 
 def already_dbg(chat_id : int):
-        group = groups.find_one({"chat_id" : str(chat_id)})
+        group = groups.find_one({"chat_id" : chat_id})
         if not group:
             return False
         return True
 
-def add_user(user_id):
+def add_user(user_id : int):
     in_db = already_db(user_id)
     if in_db:
         return
-    return users.insert_one({"user_id": str(user_id)}) 
+    return users.insert_one({"user_id": user_id}) 
 
-def remove_user(user_id):
+def remove_user(user_id : int):
     in_db = already_db(user_id)
     if not in_db:
         return 
-    return users.delete_one({"user_id": str(user_id)})
+    return users.delete_one({"user_id": user_id})
     
-def add_group(chat_id):
+def add_group(chat_id : int):
     in_db = already_dbg(chat_id)
     if in_db:
         return
-    return groups.insert_one({"chat_id": str(chat_id)})
+    return groups.insert_one({"chat_id": chat_id})
 
 def all_users():
     user = users.find({})
