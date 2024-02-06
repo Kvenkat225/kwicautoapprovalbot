@@ -6,13 +6,13 @@ client = MongoClient(cfg.MONGO_URI)
 users = client['main']['users']
 groups = client['main']['groups']
 
-def already_db(user_id):
+def already_db(user_id : int):
         user = users.find_one({"user_id" : str(user_id)})
         if not user:
             return False
         return True
 
-def already_dbg(chat_id):
+def already_dbg(chat_id : int):
         group = groups.find_one({"chat_id" : str(chat_id)})
         if not group:
             return False
